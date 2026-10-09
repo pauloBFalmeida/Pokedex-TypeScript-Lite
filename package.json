@@ -4,7 +4,7 @@
   "description": "Pokedex TypeScript Lite é uma aplicação em Node.js com TypeScript criado para o Mini-Projeto Avaliativo para o curso de Back-end",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/main.ts"
   },
   "repository": {
     "type": "git",
