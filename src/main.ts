@@ -14,11 +14,19 @@ async function buscarAddPokemon(catalogo: CatalogoPokemon, nomeOuId: string): Pr
 async function main(): Promise<void> {
     const catalogo = new CatalogoPokemon();
 
-    const pokemon = await buscarAddPokemon(catalogo, "pikachu");
+    // captura pikachu
+    await buscarAddPokemon(catalogo, "pikachu");
+    // captura charmander
+    await buscarAddPokemon(catalogo, "charmander");
+    // pikachu duplicado
+    await buscarAddPokemon(catalogo, "25");
+    // pokemon inexistente
+    await buscarAddPokemon(catalogo, "pokemon-inexistente");
 
-    if (pokemon !== null) {
-        console.log(pokemon);
-    }
+    // funcionamento do catalogo
+    catalogo.listar();
+    catalogo.remover(25);
+    catalogo.listar();
 }
 
 main();
