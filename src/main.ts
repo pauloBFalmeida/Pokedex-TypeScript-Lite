@@ -14,6 +14,7 @@ async function buscarAddPokemon(catalogo: CatalogoPokemon, nomeOuId: string): Pr
 async function main(): Promise<void> {
     const catalogo = new CatalogoPokemon();
 
+    console.log("--- Capturar Pokemons ---");
     // captura pikachu
     await buscarAddPokemon(catalogo, "pikachu");
     // captura charmander
@@ -24,6 +25,7 @@ async function main(): Promise<void> {
     await buscarAddPokemon(catalogo, "pokemon-inexistente");
 
     // funcionamento do catalogo
+    console.log("--- Catalogo ---");
     catalogo.listar();
     catalogo.remover(25);
     catalogo.listar();
