@@ -5,8 +5,9 @@ async function buscarAddPokemon(catalogo: CatalogoPokemon, nomeOuId: string): Pr
   const pokemon = await buscarPokemon(nomeOuId);
 
   if (pokemon !== null) {
-    catalogo.adicionar(pokemon);
+    console.log(`[OK] Pokémon encontrado:  ${pokemon.nome}`);
     console.log(pokemon);
+    catalogo.adicionar(pokemon);
   }
 
 }
